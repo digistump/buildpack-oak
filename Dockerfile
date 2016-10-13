@@ -19,6 +19,7 @@ RUN cp /oakCore/variants/oak/pins_arduino.* /oakCore/cores/oak/
 # Run some setup scripts now to make subsequent processing a lot faster
 
 # Setup tools required for building 
+RUN wget -O /oakCore/packages/package_digistump_index.json https://raw.githubusercontent.com/digistump/arduino-boards-index/1.0.6/package_digistump_index.json
 RUN cd /oakCore/tools && \
     python get.py
 
